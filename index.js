@@ -363,13 +363,7 @@ function randomize(/* Code here */){
 function refractor(array) {
   
   for (i in array){
-    function century(birthYear){
-      return birthYear >= 1900
-      console.log(birthYear);
+    console.log(artists.filter(x => birthYear > 1900));
     }
-    console.log(artists.filter(century));
-  }
-
-  
   }
 refractor(artists);
