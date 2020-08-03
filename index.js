@@ -257,7 +257,6 @@ function get20s(/* Code here */){
 function removeArtist(array, index) {
     array.splice(index, 1);  
     console.log(artists.length);
-    console.log(artists)
   }
   
 removeArtist(artists, 9);
@@ -276,11 +275,16 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
+function addArtist(array, index, name, years, genre, nationality, bio){
 
-    /* Code here */
+console.log(index);
+array.push({id: index, name: name, years: years, genre: genre, nationality: nationality, bio: bio});
+
+console.log(artists.length);
+console.log(artists);
 
   }
+addArtist(artists, 21, "Mark Hillin", "1971", "Web Design", "American", "I am a father, parent, and friend Life is Good");
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
