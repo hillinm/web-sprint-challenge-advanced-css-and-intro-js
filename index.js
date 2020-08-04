@@ -363,18 +363,24 @@ function getHTML(array){
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-/*function randomize(array){
+function randomize(array){
 
-    console.log(artists.name.randomize);
+    console.log(array.sort(() => Math.random()-0.5));
 
   }
-randomize(artists);*/
+randomize(artists);
+
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
-/* function refractor(array) {
-  
+function refractor(array) {
   for (i in array){
-    console.log(artists.filter(x => birthYear > 1900));
-    }
+    birthYear = array[i].years.split(" ")[0];
+    deathYear = array[i].years.split(" ")[2];
+    const result = array.filter(x => birthYear > 1900);
+    const result2 = result.filter(x => deathYear < 2000);
+    console.log(result2[i]);
   }
-refractor(artists); */
+  
+}
+
+refractor(artists)
