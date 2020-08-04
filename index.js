@@ -343,7 +343,18 @@ The function should console.log 50 chunks of HTML code that match the structure 
 function getHTML(array){
 
   for (i in array){
-    console.log(array[i]);
+
+    console.log(`
+    <div id ="artist">
+    <div class="image">
+      <img src = ${artists[i].imagesrc}/>
+    </div>
+    <div class = "name">
+      <a href = ${artists[i].wikipedia}>${artists[i].name}</a>
+    </div>
+    <div class = "bio">${artists[i].bio};
+    </div>
+    `)
     }
   }
 
@@ -352,18 +363,18 @@ function getHTML(array){
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+/*function randomize(array){
 
-    /* Code here */
+    console.log(artists.name.randomize);
 
   }
-
+randomize(artists);*/
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
-function refractor(array) {
+/* function refractor(array) {
   
   for (i in array){
     console.log(artists.filter(x => birthYear > 1900));
     }
   }
-refractor(artists);
+refractor(artists); */
